@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.footer {
+    background-color: rgb(243, 243, 243);
+    padding: 20px;
+    text-align: center;
+    margin-top: 26px;
+    border-top: 1px solid gainsboro;
+}
+
+.movie-card {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.badge-bg {
+    background-color: #333;
+}
+
+.movie-card-img {
+    background-color: gray;
+    aspect-ratio: 29/43;
+    position: relative;
+    background-image: url("https://www.altavod.com/assets/images/poster-placeholder.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.movie-card-img > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
