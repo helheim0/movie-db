@@ -8655,3 +8655,38 @@ Stack trace:
 #0 {main}
   thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 151
 [20-Oct-2023 14:27:28 UTC] PHP Parse error:  syntax error, unexpected string content "", expecting "-" or identifier or variable or number in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 149
+[22-Oct-2023 11:10:30 UTC] PHP Warning:  Undefined variable $result in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 179
+[22-Oct-2023 11:10:30 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, null given in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php:179
+Stack trace:
+#0 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php(179): mysqli_num_rows(NULL)
+#1 {main}
+  thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 179
+[22-Oct-2023 11:11:18 UTC] PHP Warning:  Undefined variable $result in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 181
+[22-Oct-2023 11:11:18 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, null given in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php:181
+Stack trace:
+#0 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php(181): mysqli_num_rows(NULL)
+#1 {main}
+  thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 181
+[22-Oct-2023 11:11:23 UTC] PHP Warning:  Undefined variable $result in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 181
+[22-Oct-2023 11:11:23 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, null given in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php:181
+Stack trace:
+#0 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php(181): mysqli_num_rows(NULL)
+#1 {main}
+  thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php on line 181
+[22-Oct-2023 11:18:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'name' cannot be null in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php:40
+Stack trace:
+#0 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php(40): mysqli_stmt->execute()
+#1 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php(134): require_once('C:\\Users\\User\\L...')
+#2 {main}
+  thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php on line 40
+[22-Oct-2023 11:19:53 UTC] PHP Fatal error:  Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php:33
+Stack trace:
+#0 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php(33): in_array(Array, 'abc@email.com')
+#1 C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\movie.php(134): require_once('C:\\Users\\User\\L...')
+#2 {main}
+  thrown in C:\Users\User\Local Sites\budai-bedo-helga\app\public\demo\includes\movie-reviews.php on line 33
+[07-Nov-2023 15:21:44 UTC] PHP Warning:  Undefined variable $args in C:\Users\User\Local Sites\budai-bedo-helga\app\public\wp-content\themes\helga-budaibedo\single.php on line 19
+[07-Nov-2023 15:21:49 UTC] PHP Warning:  Undefined variable $args in C:\Users\User\Local Sites\budai-bedo-helga\app\public\wp-content\themes\helga-budaibedo\single.php on line 19
+[07-Nov-2023 15:21:57 UTC] PHP Warning:  Undefined variable $args in C:\Users\User\Local Sites\budai-bedo-helga\app\public\wp-content\themes\helga-budaibedo\single.php on line 19
+[07-Nov-2023 15:21:58 UTC] PHP Warning:  Undefined variable $args in C:\Users\User\Local Sites\budai-bedo-helga\app\public\wp-content\themes\helga-budaibedo\single.php on line 19
+[07-Nov-2023 16:32:50 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in C:\Users\User\Local Sites\budai-bedo-helga\app\public\wp-content\themes\helga-budaibedo\index.php on line 17

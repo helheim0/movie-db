@@ -130,69 +130,8 @@ if(!empty($filtered)){
         </div>
     </div>
     <div class="row gy-2 gx-3">
-        <div class="col-8 bg-light-subtle text-emphasis-light pt-4 pb-4" >
-        <h3>Leave a review</h3>
         <!-- REVIEW -->
-        <?php 
-        $conn = dbConnect('localhost', 'php-user', 'php-password', 'php-proiect');
-       
-        if(isset($_POST['review'])){ 
-            $sql = "CREATE TABLE IF NOT EXISTS reviews (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                movieId INT(6) NOT NULL,
-                name TEXT(30) NOT NULL,
-                email TEXT(30) NOT NULL,
-                review TEXT(90) NOT NULL
-            )";
-            
-            if(mysqli_query($conn, $sql)){
-                if("SELECT name, email, review FROM reviews WHERE movieId LIKE {$_GET['movie_id']} AND name NOT LIKE {$_POST['name']} AND email NOT LIKE {$_POST['email']} "){
-                $sql2 = "INSERT INTO reviews (movieId, name, email, review)
-                VALUES (?, ?, ?, ?)";
-                $s = $conn->prepare($sql2);
-                $s->bind_param("ssss", $_GET['movie_id'],  $_POST['name'], $_POST['email'], $_POST['review']);
-                $s->execute();
-            
-            if(mysqli_query($conn, $sql)){
-                ?> 
-                <div class="alert alert-success" role="alert">               
-                    Review successfully submitted!
-                </div> <?php
-            }}
-            else {
-                echo "Error: " . mysqli_error($conn);
-            }
-
-            }
-            else {
-                echo "You have already submitted a review for this movie!";
-            } ?>
-        <?php }
-        else { ?>
-            <form action="" method="POST">
-                <div class="input-group">
-                <div class="col me-2">
-                    <label class="mt-2 mb-2">Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
-                    <label class="mt-2 mb-2">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="col">
-                    <label class="mt-2 mb-2">Review</label>
-                    <textarea type="text" class="form-control" name="review" value="review" placeholder="Enter your review" required></textarea>
-                </div>
-                </div>
-                <div class="col mt-2 mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="terms" required>
-                    <label class="form-check-label" for="terms">
-                      I agree with the processing of personal data.
-                    </label>
-                </div> 
-                <button type="submit" class="btn btn-dark d-block  mt-2">Submit</button>
-            </form>
-        <?php }
-            ?>
-    </div>
+        <?php require_once("./includes/movie-reviews.php") ?>
     <div class="col-4">   
     <!-- RATING -->
         <h3>Rate this movie</h3>
@@ -235,10 +174,8 @@ if(!empty($filtered)){
     <div class="row mt-4 mb-4">
             <h3 class="mb-4">Reviews</h3>
             <?php
-            
-                $sql3 = "SELECT name, review FROM reviews WHERE movieId LIKE {$_GET['movie_id']}";
-                $result = mysqli_query($conn, $sql3);
-
+            $sql3 = "SELECT name, review FROM reviews WHERE movieId LIKE {$_GET['movie_id']}";
+            $result = mysqli_query($conn, $sql3);
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)){ ?>
                         <div class="col-auto">
